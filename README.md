@@ -1,103 +1,142 @@
-# Customer Churn Prediction Using Machine Learning
+# 📊 Telco Customer Churn Prediction
 
-## 📌 Project Overview
-This project focuses on predicting customer churn using Machine Learning techniques. The goal is to identify customers who are likely to leave a service so that businesses can take proactive retention measures.
+## Project Overview
 
-The project includes:
-- Data preprocessing and cleaning
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Handling class imbalance using SMOTE
-- Training multiple classification models
-- Model evaluation and comparison
-- Cross-validation and performance metrics
+This project aims to predict customer churn in a telecommunications company using Machine Learning techniques. Customer churn refers to customers discontinuing their telecom services. Early identification of potential churners helps organizations improve retention strategies and reduce revenue loss.
+
+The project includes data cleaning, exploratory data analysis, feature engineering, class imbalance handling using SMOTE, model training, evaluation, and comparison of multiple classification algorithms.
 
 ---
 
-## 📂 Dataset
-The project uses the **Telco Customer Churn Dataset** containing customer demographics, account information, subscribed services, and churn status.
+## Business Problem
+
+Customer retention is crucial for telecom companies. Predicting churn enables businesses to:
+
+* Identify customers at risk of leaving
+* Improve customer retention strategies
+* Reduce revenue loss
+* Increase customer lifetime value
+* Support data-driven decision making
+
+---
+
+## Dataset
+
+Dataset: Telco Customer Churn Dataset
+
+Features include:
+
+* Customer demographics
+* Service subscriptions
+* Internet services
+* Contract information
+* Payment methods
+* Monthly charges
+* Total charges
+* Churn status
 
 ### Target Variable
-- **Churn**
-  - Yes → Customer left
-  - No → Customer retained
+
+* Churn (Yes / No)
 
 ---
 
-## 🛠️ Technologies Used
+## Project Workflow
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-Learn
-- Imbalanced-Learn (SMOTE)
-- Jupyter Notebook
+### 1. Data Understanding
 
----
-
-## 📊 Project Workflow
-
-### 1. Data Collection
-- Load customer churn dataset
-- Inspect structure and data types
+* Dataset exploration
+* Data type inspection
+* Missing value analysis
 
 ### 2. Data Cleaning
-- Remove unnecessary columns
-- Handle missing values
-- Convert categorical variables
+
+* Removed CustomerID column
+* Handled missing values in TotalCharges
+* Converted TotalCharges to numeric format
 
 ### 3. Exploratory Data Analysis (EDA)
-- Customer demographics analysis
-- Service subscription analysis
-- Churn distribution analysis
-- Correlation analysis
 
-### 4. Feature Engineering
-- Label Encoding
-- Data transformation
-- Feature selection
+* Churn distribution analysis
+* Numerical feature analysis
+* Categorical feature analysis
+* Correlation heatmap
+* Box plots and visualizations
 
-### 5. Handling Imbalanced Data
-- SMOTE (Synthetic Minority Over-sampling Technique)
+### 4. Data Preprocessing
 
-### 6. Model Building
-The following classification models are evaluated:
+* Label Encoding
+* Feature transformation
+* Train-Test Split
 
-- Logistic Regression
-- Decision Tree Classifier
-- Random Forest Classifier
-- K-Nearest Neighbors (KNN)
-- Support Vector Machine (SVM)
-- Naive Bayes
-- Gradient Boosting
+### 5. Handling Class Imbalance
+
+* SMOTE (Synthetic Minority Oversampling Technique)
+
+### 6. Model Training
+
+The following classification models were trained and evaluated:
+
+* Logistic Regression
+* Decision Tree Classifier
+* Random Forest Classifier
+* XGBoost Classifier
 
 ### 7. Model Evaluation
-Performance is measured using:
 
-- Accuracy Score
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
-- Cross Validation
+Performance metrics used:
 
----
-
-## 📈 Key Objectives
-
-- Predict customer churn accurately
-- Identify important churn-driving factors
-- Compare multiple machine learning algorithms
-- Build a scalable churn prediction pipeline
+* Accuracy Score
+* Confusion Matrix
+* Precision
+* Recall
+* F1 Score
+* Classification Report
 
 ---
 
-## 🚀 Installation
+## Results
 
-Clone the repository:
+Model comparison was performed across multiple classification algorithms.
 
-```bash
-git clone https://github.com/your-username/customer-churn-prediction.git
-cd customer-churn-prediction
+**Best Performing Model:** Random Forest Classifier
+
+The model demonstrated superior performance in predicting customer churn compared to the other evaluated models.
+
+---
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* XGBoost
+* Imbalanced-Learn (SMOTE)
+* Jupyter Notebook
+
+---
+
+## Repository Structure
+
+```text
+Telco-Customer-Churn-Prediction/
+│
+├── Churn_Project_ML.ipynb
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Future Improvements
+
+* Hyperparameter tuning
+* Feature selection
+* Model deployment using FastAPI
+* Customer retention recommendation system
+* Automated ML pipeline
+
